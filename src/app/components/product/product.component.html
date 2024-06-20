@@ -1,0 +1,13 @@
+<div class="column gap-1 wrapper">
+  <img [src]="product.image" alt="Product: {{product.name}} Thumbnail">
+  <!-- alternatively we could use different syntax: src="{{product.image}}"  -->
+   <h2 class="title">{{product.name}}</h2>
+
+   <div class="row">
+    <span class="price-label">Price:</span>
+    <span class="price"> {{ product.price }}</span>
+   </div>
+   <p-rating [(ngModel)]="product.rating" [cancel]="false" [readonly]="true"/>
+   <!-- another attribute that renders the same result as cancel property is iconCancelClass="hidden" -->
+
+</div>
